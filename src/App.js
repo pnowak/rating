@@ -14,10 +14,13 @@ class App extends Component {
     const li = Array.from(document.querySelectorAll('li'));
 
     li.forEach((item, index) => {
-      item.classList.remove('active');
-
       if (index + 1 <= target) {
         item.classList.add('active');
+        item.innerHTML = '&#9733;';
+
+      } else {
+        item.classList.remove('active');
+        item.innerHTML = '&#9734;';
       }
     });
 
